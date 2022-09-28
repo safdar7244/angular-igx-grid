@@ -1,0 +1,35 @@
+<h1>Grid</h1>
+<igx-grid
+  #grid1
+  igxPreventDocumentScroll
+  [data]="temp"
+  height="600px"
+  displayDensity="cosy"
+  [allowFiltering]="true"
+  [filterMode]="'excelStyleFilter'"
+  [allowAdvancedFiltering]="true"
+>
+  <igx-column
+    header="Rank"
+    [width]="'12%'"
+    field="Id"
+    sortable="true"
+    [filterable]="false"
+  >
+    <ng-template igxCell let-cell="cell">
+      {{ cell.value }}
+    </ng-template>
+  </igx-column>
+
+  <igx-column
+    header="Rank"
+    [width]="'12%'"
+    field="Name"
+    sortable="true"
+    [filterable]="false"
+  >
+    <ng-template igxCell let-cell="cell">
+      {{ cell.value }}
+    </ng-template>
+  </igx-column>
+</igx-grid>
